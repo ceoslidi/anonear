@@ -24,12 +24,12 @@ async fn main() {
         .serve(make_svc);
 
     loop {
-        run_node();п
+        run_node();
     }
 }
 
 fn run_node() {
-    write_block(generate_block()).expect("Cant write the block");
+    write_block(generate_block());
     thread::sleep(Duration::from_millis(1000));
 }
 
