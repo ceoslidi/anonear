@@ -42,7 +42,7 @@ pub fn generate_block() -> Block {
     );
 
     let mempool = BufReader::new(File::open("blockchain/mempool.dat").unwrap());
-    let mut lines: Vec<_> = mempool.lines().map(|line| {line.unwrap()}).collect();
+    let lines: Vec<_> = mempool.lines().map(|line| {line.unwrap()}).collect();
     let mut transactions = "[".to_string();
 
     for line in lines {
@@ -52,7 +52,7 @@ pub fn generate_block() -> Block {
 
     transactions.push_str("]");
 
-    let mut block = Block{
+    let block = Block{
         epoch,
         index,
         writer,
@@ -89,6 +89,6 @@ pub fn write_block(block: Block) {
 
         writeln!(file, "{}", new_block).unwrap();
 
-        let mut mempool = File::create("blockchain/mempool.dat");
+        let mempool = File::create("blockchain/mempool.dat");
     }
 }
