@@ -4,7 +4,12 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94718721-0fae-497d-8c7d-f6dc21869b9f" name="Changes" comment="" />
+    <list default="true" id="94718721-0fae-497d-8c7d-f6dc21869b9f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blockchain/1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/blockchain/1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blockchain_manager.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/blockchain_manager.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +56,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Cargo.toml" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+    <property name="org.rust.disableDetachedFileInspectionC:/Users/Yansv/Documents/master-node/amn/src/mempool_manager.rs" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -73,7 +79,8 @@
       <workItem from="1647160707878" duration="138000" />
       <workItem from="1647160862273" duration="460000" />
       <workItem from="1647161372590" duration="17576000" />
-      <workItem from="1647189631714" duration="20562000" />
+      <workItem from="1647189631714" duration="21821000" />
+      <workItem from="1647280091346" duration="2518000" />
     </task>
     <servers />
   </component>
