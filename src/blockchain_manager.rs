@@ -63,30 +63,32 @@ pub fn generate_block() -> Block {
     return block;
 }
 
-pub fn write_block(block: Block) -> Result<(), Error> {
-    let mut new_block = "".to_string();
-    new_block.push_str(&*block.epoch);
-    new_block.push_str("-");
-    new_block.push_str(&*block.index);
-    new_block.push_str("-");
-    new_block.push_str(&*block.writer);
-    new_block.push_str("-");
-    new_block.push_str(&*block.previous);
-    new_block.push_str("-");
-    new_block.push_str(&*block.transactions);
+pub fn write_block(block: Block) {
+    if block.transactions.len() != 2 {
+        let mut new_block = "".to_string();
+        new_block.push_str(&*block.epoch);
+        new_block.push_str("-");
+        new_block.push_str(&*block.index);
+        new_block.push_str("-");
+        new_block.push_str(&*block.writer);
+        new_block.push_str("-");
+        new_block.push_str(&*block.previous);
+        new_block.push_str("-");
+        new_block.push_str(&*block.transactions);
 
-    let path = &*format!(
-        "blockchain/{}.dat",
-        block.epoch
-    );
+        let path = &*format!(
+            "blockchain/{}.dat",
+            block.epoch
+        );
 
-    let mut file: File = OpenOptions::new()
-        .write(true)
-        .append(true)
-        .open(path)
-        .unwrap();
+        let mut file: File = OpenOptions::new()
+            .write(true)
+            .append(true)
+            .open(path)
+            .unwrap();
 
-    writeln!(file, "{}", new_block).unwrap();
+        writeln!(file, "{}", new_block).unwrap();
 
-    Ok(())
+        let mut mempool = File::create("blockchain/mempool.dat");
+    }
 }
